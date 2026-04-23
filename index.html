@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATechShield — Ca · Tech · Shield</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Fronted/CATechnologyShield.css">
+</head>
+<body>
+
+<!-- CURSOR PERSONALIZADO -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- FONDO DE CUADRÍCULA -->
+<div class="grid-bg" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-logo">CATS</div>
+    <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollToContact()">Cotizar</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+        <div class="hex-logo-wrap">
+            <svg class="hex-ring" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" stroke="rgba(0,240,255,0.5)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+                <polygon points="100,25 175,65 175,135 100,175 25,135 25,65" stroke="rgba(0,240,255,0.2)" stroke-width="0.5" fill="none"/>
+                <circle cx="100" cy="100" r="55" stroke="rgba(0,240,255,0.08)" stroke-width="1" fill="none"/>
+            </svg>
+            <div class="hex-logo-inner">
+                <img src="./Assets/Image/logo_cats_icon.png" alt="CATechShield" class="logo">
+            </div>
+        </div>
+
+        <div class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            Sistemas activos · Disponible ahora
+        </div>
+
+        <p class="hero-eyebrow">Ca · Tech · Shield &nbsp;|&nbsp; Seguridad · Confianza · Tecnología</p>
+        <h1>Soluciones de <span class="accent">Tecnología</span><br>para Hogar y Negocios</h1>
+        <p class="hero-sub">Diseñamos · Instalamos · Protegemos</p>
+
+        <div class="typewriter-wrap">
+            <span class="typewriter-prefix">›</span>
+            <span class="typewriter" id="typewriter" aria-live="polite"></span>
+        </div>
+
+        <div class="buttons">
+            <button onclick="scrollToContact()">Solicitar Cotización</button>
+            <button class="secondary" onclick="scrollToServices()">Ver Servicios</button>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num">+200</span>
+                <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Confiabilidad</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat">
+                <span class="stat-num">24/7</span>
+                <span class="stat-label">Soporte</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Servicios</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</header>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+    <div class="section-header">
+        <div class="section-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-diamond"></span>
+            <span class="divider-line"></span>
+        </div>
+        <p class="section-tag">Módulos de servicio</p>
+        <h2>Servicios</h2>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card" data-index="01">
+            <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <rect x="9" y="12" width="6" height="10"/>
+                    <circle cx="12" cy="6" r="1" fill="currentColor"/>
+                </svg>
+            </div>
+            <h3>Seguridad Electrónica (CCTV)</h3>
+            <p>Instalación, monitoreo y mantenimiento de sistemas de videovigilancia.</p>
+            <span class="card-num">SRV-01</span>
+        </div>
+
+        <div class="card" data-index="02">
+            <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+            </div>
+            <h3>Consultoría en Computación</h3>
+            <p>Optimización, soporte técnico y soluciones digitales.</p>
+            <span class="card-num">SRV-02</span>
+        </div>
+
+        <div class="card" data-index="03">
+            <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+            </div>
+            <h3>Servicios de Ingeniería</h3>
+            <p>Diseño de redes, CCTV, cableado estructurado y automatización.</p>
+            <span class="card-num">SRV-03</span>
+        </div>
+
+        <div class="card" data-index="04">
+            <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="1" y="4" width="22" height="16" rx="2"/>
+                    <path d="M1 10h22"/>
+                    <circle cx="7" cy="15" r="1" fill="currentColor"/>
+                </svg>
+            </div>
+            <h3>Venta de Equipo</h3>
+            <p>Computadoras, cámaras, redes y accesorios tecnológicos.</p>
+            <span class="card-num">SRV-04</span>
+        </div>
+    </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="about" id="nosotros">
+    <div class="section-header">
+        <div class="section-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-diamond"></span>
+            <span class="divider-line"></span>
+        </div>
+        <p class="section-tag">Protocolo de valor</p>
+        <h2>¿Por qué elegirnos?</h2>
+        <p class="about-lead">Brindamos soluciones tecnológicas seguras, confiables y personalizadas para cada cliente.</p>
+    </div>
+
+    <div class="pillars">
+        <div class="pillar">
+            <span class="pillar-num">01</span>
+            <h3>Seguridad</h3>
+            <p>Sistemas certificados con los más altos estándares de protección digital.</p>
+        </div>
+        <div class="pillar">
+            <span class="pillar-num">02</span>
+            <h3>Confianza</h3>
+            <p>Transparencia total desde el diagnóstico hasta la implementación final.</p>
+        </div>
+        <div class="pillar">
+            <span class="pillar-num">03</span>
+            <h3>Tecnología</h3>
+            <p>Equipos y soluciones de última generación adaptados a tu realidad.</p>
+        </div>
+        <div class="pillar">
+            <span class="pillar-num">04</span>
+            <h3>Soporte</h3>
+            <p>Atención continua y mantenimiento preventivo para tu tranquilidad.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+    <div class="section-header">
+        <div class="section-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-diamond"></span>
+            <span class="divider-line"></span>
+        </div>
+        <p class="section-tag">Canal de comunicación</p>
+        <h2>Contacto</h2>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-corner tl" aria-hidden="true"></div>
+        <div class="contact-corner br" aria-hidden="true"></div>
+        <div class="contact-watermark" aria-hidden="true">CATS</div>
+
+        <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+            </div>
+            <div>
+                <span class="contact-label">Teléfono</span>
+                <a href="tel:12345678" class="contact-val">1234-5678</a>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </div>
+            <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:soporte@catechshield.com" class="contact-val">soporte@catechshield.com</a>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                </svg>
+            </div>
+            <div>
+                <span class="contact-label">Web</span>
+                <a href="https://catechshield.com" class="contact-val" target="_blank" rel="noopener">catechshield.com</a>
+            </div>
+        </div>
+
+        <button class="btn-cta-big" onclick="window.location.href='mailto:soporte@catechshield.com'">
+            Iniciar Proyecto ›
+        </button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-logo">CATS</div>
+    <p class="footer-tagline">Ca · Tech · Shield</p>
+    <p class="footer-copy">© 2025 CATechShield · Seguridad · Confianza · Tecnología</p>
+</footer>
+
+<script src="./backend/CATechnologyShield.js"></script>
+</body>
+</html>
